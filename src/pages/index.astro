@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FitCheck from '../components/FitCheck.tsx';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+        <FitCheck className="nice" client:only="react" />
+	</main>
+</Layout>
+
+<style>
+    html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    main {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nice {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+</style>
